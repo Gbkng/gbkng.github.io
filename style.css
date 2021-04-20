@@ -1,0 +1,96 @@
+/* balise modifiant toute la page ! */
+
+
+/* On peut utiliser background pour n'importe quelle balise ! */
+
+body {
+    background-color: rgb(241, 176, 169);
+    color: black;
+    background-image: url("pictures/grim1_pst.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: auto;
+}
+
+
+/* Modifier la balise p */
+
+p {
+    /* syntax `param1: valeur1;` */
+    /* color: rgb(153, 97, 153); */
+    font-size: 16px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: black;
+    color: white;
+    opacity: 0.7;
+}
+
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 500;
+    text-align: center;
+}
+
+p .leftParagraph {
+    /* font-size: 16px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+    text-align: left;
+}
+
+.centerParagraph {
+    text-align: center;
+}
+
+
+/* Modifier une classe. Noter l'utilisation du `.` */
+
+.introduction {
+    color: rgb(90, 90, 163);
+}
+
+.nomDuSeigneur {
+    /* custom color with rgb parameters */
+    color: rgb(50, 95, 46);
+}
+
+.fancyParagraph {
+    color: red;
+}
+
+
+/* une balise contenue dans une autre (fancyParagraph dans p) */
+
+p .fancyParagraph {}
+
+
+/* parler de deux balises d'un coup */
+
+p,
+.introduction {}
+
+
+/* la balise universelle. S'applique à toutes les balises */
+
+* {}
+
+
+/* une balise qui en suit une autre */
+
+p+.introduction {}
+
+
+/* toutes les balises <a> qui possèdent l'attribu "title" */
+
+a[title] {}
+
+
+/* toutes les balises <a> qui possèdent un attribu "title" qui vaut "coucou" */
+
+a[title="coucou"] {}
+
+
+/* toutes les balises <a> qui possèdent un attribu "title" qui contient la chaîne de caractères "coucou" */
+
+a[title*="coucou"] {}
